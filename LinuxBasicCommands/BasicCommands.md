@@ -49,7 +49,7 @@
   
 * ` | `     connects a command to another command
 
-| redirect  ` > `                          | pipe  ` | `                                |
+| redirect | pipe |
 | --- | --- |
 | redirect connects a command to some file | pipe connects a command to another command |
 
