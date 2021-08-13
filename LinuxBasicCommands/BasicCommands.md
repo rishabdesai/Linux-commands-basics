@@ -22,6 +22,45 @@
 * ` rm -r `     remove directory
 * ` rmdir `     remove empty directory
 
+-------
+
+### Working with files
+
+* ` cat `       con**cat**enation – to display the content of the file on screen
+* ` tac `       (cat spelled backwards) print files in revrese. 
+
+* ` less `      display the content of a file, one page at a time. <br/>
+(space bar/f= goto next page, b=previous page, enter/down arrow=scroll by one line, / = search, q = quit)
+* ` rev `       print the content of file by reversing the order of each line.  
+* ` head `      prints first 10 lines of a file ( use -` -n 20 `  to display first 20 lines)
+* ` tail `      prints last 10 lines of a file
+* ` wc `        count of number of words, lines and bytes in file <br/>
+( ` - l ` = line count, ` -w ` = word count,  ` -m ` = charactor count, ` -c ` = byte count)
+* ` sort `      shows the sorted content of a file ( ` -u ` = unique values)
+
+-------
+
+### Redirecting & piping
+
+* source content ` > ` destination location
+* ` < `     pass the content of a file to standard input.
+* ` 2> `    redirect the error log to a file
+* ` &> `    redirect the standard output and error log to same file
+  
+* ` | `     connects a command to another command
+
+| redirect | pipe |
+| -------- | ---- |
+| ` > ` connects a command to some file | ` | ` connects a command to another command |
+
+* ` tr `    translate or delete characters
+(ex. ` text.txt | tr a A ` = pipe output of text.txt and repalce a with A)
+
+
+-------
+
+### other
+
 * ` grep `      it searches files for specified words or patterns.
 * ` histroy `  list of previously used commands
 * ` histroy | less `  list of previously used commands with limit
@@ -38,37 +77,12 @@
 
 * ` cat > textfile1 `   ( send screen input to file name textfile1)
 
----
-
-### Working with files
-
-* ` cat `       con**cat**enation – to display the content of the file on screen
-* ` tac `       (cat spelled backwards) print files in revrese. 
-
-* ` less `      display the content of a file, one page at a time. <br/>
-(space bar/f= goto next page, b=previous page, enter/down arrow=scroll by one line, / = search, q = quit)
-* ` rev `       print the content of file by reversing the order of each line.  
-* ` head `      prints first 10 lines of a file ( use -` -n 20 `  to display first 20 lines)
-* ` tail `      prints last 10 lines of a file
-* ` wc `        count of number of words, lines and bytes in file <br/>
-( ` - l ` = line count, ` -w ` = word count,  ` -m ` = charactor count, ` -c ` = byte count)
-* ` sort `      shows the sorted content of a file ( ` -u ` = unique values)
-
----
-
-### Redirecting
-
-source content ` > ` destination location
-
-
-
-
----
+-------
 
 ### Keyboard shortcut for terminal:
 
 * ` ctrl + l ` clear the screen
-\
+
 * ` ctrl + a ` & ` ctrl + e ` bring cursor to st**a**rt of line or **e**nd of line
 * ` ctrl + f ` & ` ctrl + b ` move cursor **f**ront or **b**ack, one charactor at a time
 
