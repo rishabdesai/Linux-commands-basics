@@ -26,7 +26,7 @@
 
 ### Working with files
 
-* ` cat `       con**cat**enation – to display the content of the file on screen
+* ` cat `       con**cat**enation – to display the content of the file on screen. Use ` -n ` to display line numbers.
 * ` tac `       (cat spelled backwards) print files in revrese. 
 
 * ` less `      display the content of a file, one page at a time. <br/>
@@ -47,15 +47,24 @@
 * ` 2> `    redirect the error log to a file
 * ` &> `    redirect the standard output and error log to same file
   
-* ` | `     connects a command to another command
+* ` | `     pipe = connects a command to another command
 
 | redirect | pipe |
 | --- | --- |
 | redirect connects a command to some file | pipe connects a command to another command |
 
-* ` tr `    translate or delete characters
-(ex. ` text.txt | tr a A ` = pipe output of text.txt and repalce a with A)
+* ` tr `    translate or delete characters from standard input, writing to standard output.
 
+```console
+pi@pi:~ $ echo name : 123 456 789
+name : 123 456 789
+pi@pi:~ $ echo name : 123 456 789 | tr -d [:alpha:]
+ : 123 456 789
+pi@pi:~ $ echo name : 123 456 789 | tr -d [:alpha:] | tr -d :
+  123 456 789
+pi@pi:~ $ echo name : 123 456 789 | tr -d [:alpha:] | tr -d : | tr -d [:blank:]
+123456789
+```
 
 -------
 
@@ -77,6 +86,7 @@
 
 * ` cat > textfile1 `   ( send screen input to file name textfile1)
 
+* ` du -ha` disk usages ( -h for human readable format, -a for all)
 -------
 
 ### Keyboard shortcut for terminal:
