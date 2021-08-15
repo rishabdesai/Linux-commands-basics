@@ -22,6 +22,8 @@
 * ` rm -r `     remove directory
 * ` rmdir `     remove empty directory
 
+* ` echo `      displays thxt that we pass to it.
+
 -------
 
 ### Working with files
