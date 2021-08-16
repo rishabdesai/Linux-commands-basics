@@ -28,11 +28,14 @@
 
 ### Working with files
 
-* ` cat `       con**cat**enation – to display the content of the file on screen. Use ` -n ` to display line numbers.
+* ` cat `       con**cat**enation – to display the content of the file on screen. 
+  Use ` -n ` to display line numbers.
+
 * ` tac `       (cat spelled backwards) print files in revrese. 
 
 * ` less `      display the content of a file, one page at a time. <br/>
 (space bar/f= goto next page, b=previous page, enter/down arrow=scroll by one line, / = search, q = quit)
+
 * ` rev `       print the content of file by reversing the order of each line.  
 * ` head `      prints first 10 lines of a file ( use -` -n 20 `  to display first 20 lines)
 * ` tail `      prints last 10 lines of a file
@@ -70,6 +73,19 @@ pi@pi:~ $ echo name : 123 456 789 | tr -d [:alpha:] | tr -d : | tr -d [:blank:]
 
 -------
 
+#### TimeStamps 
+
+* ` mtime `   modification time (inside of a file :time when the content of file last changed)
+  when we type ` ls -l ` then by default, it shows mtime.
+
+* ` ctime `   change time (outside of a file : ex. rename file, alter file, move file etc)
+  when we type ` ls - lc ` then it shows change time. 
+  when mtime changes, then ctime also changes. But opposite is not true.
+
+* ` atime `   access time (updated when a file is read by application, ex. cat command)
+*  when you type ` ls -lu ` then it shows last access time.
+-------
+
 ### other
 
 * ` grep `      it searches files for specified words or patterns.
@@ -89,6 +105,12 @@ pi@pi:~ $ echo name : 123 456 789 | tr -d [:alpha:] | tr -d : | tr -d [:blank:]
 * ` cat > textfile1 `   ( send screen input to file name textfile1)
 
 * ` du -ha` disk usages ( -h for human readable format, -a for all)
+
+* ` find ~ -type f -empty ` find all empty files from home folder
+
+* ` find ~ -type f -empty -exec ls -l '{}' ';' ` find all empty files from home folder and also print the permissions for each folder.
+
+` find -type f -name "*.txt" -exec cp '{}' '{}_copy' ';' ` find all files with extension txt. Then create copy of each file with suffix as copy.
 -------
 
 ### Keyboard shortcut for terminal:
