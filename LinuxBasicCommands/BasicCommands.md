@@ -88,7 +88,6 @@ pi@pi:~ $ echo name : 123 456 789 | tr -d [:alpha:] | tr -d : | tr -d [:blank:]
 
 ### other
 
-* ` grep `      it searches files for specified words or patterns.
 * ` histroy `  list of previously used commands
 * ` histroy | less `  list of previously used commands with limit
 
@@ -112,6 +111,26 @@ pi@pi:~ $ echo name : 123 456 789 | tr -d [:alpha:] | tr -d : | tr -d [:blank:]
 
 ` find -type f -name "*.txt" -exec cp '{}' '{}_copy' ';' ` find all files with extension txt. Then create copy of each file with suffix as copy.
 -------
+
+### grep
+
+* ` grep `      it searches files for specified words or patterns. (ex.grep 'one' filename.txt)
+* ` grep -w `   match exact word (ex. grep -w 'number' filename.txt)
+* ` grep -r `   recursive search which inclide all files under directory, sub-directory and their files etc.
+ (Ex. grep -r 'hello' directoryName)
+* ` grep -c `  count of searching word (ex. grep -c "i am" filename.txt )
+* 
+
+### Regular Expressions (Regex)
+
+* ` . `       match single charactor
+* ` ^ `       match start of a line
+* ` $ `       match end of a line
+* ` [abc] `   match any charactor in the set
+* ` [^abc] `  maych any charactor not in the set
+* ` [A-Z] `   match charactor in a range
+* ` * `       zero or more times 
+* ` \ `       escape
 
 ### Keyboard shortcut for terminal:
 
