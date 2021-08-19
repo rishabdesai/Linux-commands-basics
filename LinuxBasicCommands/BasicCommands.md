@@ -86,6 +86,15 @@ pi@pi:~ $ echo name : 123 456 789 | tr -d [:alpha:] | tr -d : | tr -d [:blank:]
 *  when you type ` ls -lu ` then it shows last access time.
 -------
 
+### grep
+
+* ` grep `      it searches files for specified words or patterns. (ex.grep 'one' filename.txt)
+* ` grep -w `   match exact word (ex. grep -w 'number' filename.txt)
+* ` grep -r `   recursive search which inclide all files under directory, sub-directory and their files etc.
+ (Ex. grep -r 'hello' directoryName)
+* ` grep -c `  count of searching word (ex. grep -c "i am" filename.txt )
+-----
+
 ### other
 
 * ` histroy `  list of previously used commands
@@ -112,14 +121,36 @@ pi@pi:~ $ echo name : 123 456 789 | tr -d [:alpha:] | tr -d : | tr -d [:blank:]
 ` find -type f -name "*.txt" -exec cp '{}' '{}_copy' ';' ` find all files with extension txt. Then create copy of each file with suffix as copy.
 -------
 
-### grep
+### Cron 
+* allow you to schedule execute commands at perticular regular interval
+* ` crontab -e ` editing the crontab
+  
+```console
+Syntax:
+a  b  c  d  e  command
 
-* ` grep `      it searches files for specified words or patterns. (ex.grep 'one' filename.txt)
-* ` grep -w `   match exact word (ex. grep -w 'number' filename.txt)
-* ` grep -r `   recursive search which inclide all files under directory, sub-directory and their files etc.
- (Ex. grep -r 'hello' directoryName)
-* ` grep -c `  count of searching word (ex. grep -c "i am" filename.txt )
-* 
+a = Minutes (0 -59)
+b = Hour  (0 - 23)
+c = Day (1 - 31)
+d = Month (1 - 12)
+e = Day of week (0 - 6)
+
+Cron characters:
+
+* = any value
+1-6 = Range of values (1 to 6)
+1,6 = List of values (1 and 6)
+*/2 = step values (every 2)
+
+Ex:
+30 * * * * command ( Run a job at 30 minutes in every hour)
+0 0 * * * command ( Run a job every day at midnight )
+
+
+```
+
+
+----
 
 ### Regular Expressions (Regex)
 
@@ -131,6 +162,8 @@ pi@pi:~ $ echo name : 123 456 789 | tr -d [:alpha:] | tr -d : | tr -d [:blank:]
 * ` [A-Z] `   match charactor in a range
 * ` * `       zero or more times 
 * ` \ `       escape
+
+----
 
 ### Keyboard shortcut for terminal:
 
