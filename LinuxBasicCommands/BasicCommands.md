@@ -116,9 +116,10 @@ pi@pi:~ $ echo name : 123 456 789 | tr -d [:alpha:] | tr -d : | tr -d [:blank:]
 
 * ` find ~ -type f -empty ` find all empty files from home folder
 
-* ` find ~ -type f -empty -exec ls -l '{}' ';' ` find all empty files from home folder and also print the permissions for each folder.
+* ` find ~ -type f -empty -exec ls -l '{}' ';' ` 
+* find all empty files from home folder and also print the permissions for each folder.
 
-` find -type f -name "*.txt" -exec cp '{}' '{}_copy' ';' ` find all files with extension txt. Then create copy of each file with suffix as copy.
+* ` find -type f -name "*.txt" -exec cp '{}' '{}_copy' ';' `  find all files with extension txt. Then create copy of each file with suffix as copy.
 -------
 
 ### Cron 
