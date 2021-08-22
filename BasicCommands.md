@@ -119,8 +119,50 @@ pi@pi:~ $ echo name : 123 456 789 | tr -d [:alpha:] | tr -d : | tr -d [:blank:]
 * ` find ~ -type f -empty -exec ls -l '{}' ';' ` find all empty files from home folder and also print the permissions for each folder.
 
 * ` find -type f -name "*.txt" -exec cp '{}' '{}_copy' ';' `  find all files with extension txt. Then create copy of each file with suffix as copy.
+
+* ` ip addr | grep inet ` check IP address of server
 -------
 
+### Permissions
+
+* users : **u** = user, **g** = grpup, **o** = others, **a** = all  
+* Permissions: **r** = read, **w** = write, **x** =execute
+* Operators: 
+  * **+** (add permission) 
+  * **-** (remove permission) 
+  * **=** (overrites any existing permission with the ones specified)
+* Numeric permissions:
+  * 4 = Read
+  * 2 = Write
+  * 1 = Execute
+
+ ```console
+
+r  |  w  |  x  
+4  |  2  |  1  
+
+rwx = 4 + 2 + 1 = 7
+rw- = 4 + 2 + 0 = 6
+r-x = 4 + 0 + 1 = 5
+r-- = 4 + 0 + 0 = 4
+-wx = 0 + 2 + 1 = 3
+-w- = 0 + 2 + 0 = 2
+--x = 0 + 0 + 1 = 1
+
+Ex:
+$> chmod 744 text.txt is same as
+
+$> chmod u=rwx text.txt
+$> chmod go=r text.txt
+
+ ```  
+
+* ` chmod `  to change permissions of user
+* ` chmod o-r fineName.txt ` 
+
+
+
+----
 ### Cron 
 * allow you to schedule execute commands at perticular regular interval
 * ` crontab -e ` editing the crontab

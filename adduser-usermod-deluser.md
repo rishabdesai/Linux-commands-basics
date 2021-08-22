@@ -9,18 +9,18 @@
 (user to modify user after creation )
 
 * add user to sudo group
-` usermod -aG sudo newUserName ` 
+` usermod -aG sudo newUserName `  
 (-a = add, -G = secondary group)
 
-* check the user groups
-` cat /etc/group | grep newUserName `
+* check the user groups  
+` cat /etc/group | grep newUserName ` 
 
-* To lock user account
-` usermod -L newUserName `
+* To lock user account  
+` usermod -L newUserName `  
 (-L = lock)
 
-* To unlock user account
-` usermod -U newUserName `
+* To unlock user account  
+` usermod -U newUserName `  
 (-U = unlock)
 
 ---
@@ -28,19 +28,19 @@
 ### deluser 
 (to delete user )
 
-* To check files created by user
+* To check files created by user  
 ` find / -user newUserName `
 
-* To delete user
+* To delete user  
 ` deluser --remove-all-files --backup --bacup-to /user-backups/ newUserName `
 
 ---
 
 ### groups
 
-* add new group
+* add new group  
 ` addgroup `
 
-* Change group
+* Change group  
 ` chgrp `
 
