@@ -125,7 +125,7 @@ pi@pi:~ $ echo name : 123 456 789 | tr -d [:alpha:] | tr -d : | tr -d [:blank:]
 
 ### Permissions
 
-* users : **u** = user, **g** = grpup, **o** = others, **a** = all  
+* Category : **u** = user, **g** = grpup, **o** = others, **a** = all  
 * Permissions: **r** = read, **w** = write, **x** =execute
 * Operators: 
   * **+** (add permission) 
@@ -149,12 +149,16 @@ r-- = 4 + 0 + 0 = 4
 -w- = 0 + 2 + 0 = 2
 --x = 0 + 0 + 1 = 1
 
-Ex:
+Ex 1:
 $> chmod 744 text.txt is same as
 
 $> chmod u=rwx text.txt
 $> chmod go=r text.txt
 
+Ex 2: 
+$> chmod 777 text.txt is same as
+
+$> chomd a+rwx text.txt
  ```  
 
 * ` chmod `  to change permissions of user
